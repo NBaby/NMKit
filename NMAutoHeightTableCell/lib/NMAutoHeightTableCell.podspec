@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint NMAutoTableViewCell.podspec' to ensure this is a
+#  Be sure to run `pod spec lint NMAutoHeightTableCell.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "NMAutoTableViewCell"
+  s.name         = "NMAutoHeightTableCell"
   s.version      = "0.0.1"
   s.summary      = "一个可以使用Autolayout实现自动计算Cell高度的扩展库"
 
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    一个可以使用Autolayout实现自动计算Cell高度的扩展库
                    DESC
 
-  s.homepage     = "https://github.com/NBaby/NMKit/tree/master/NMAutoTableViewCell"
+  s.homepage     = "https://github.com/NBaby/NMKit/tree/master/NMAutoHeightTableCell"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "NMAutoTableViewCell/lib", "*.{h,m}"
+  s.source_files  = "NMAutoHeightTableCell/lib", "*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
