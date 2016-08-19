@@ -23,3 +23,18 @@
  */
 - (CGFloat)getHeightWidthInfo:(id)info;
 @end
+
+@interface UITableView(NMCustomTableView)
+
+@property (nonatomic, strong) NSMutableDictionary * cellHeightCache;
+
+- (UITableViewCell *)customCellWithCellName:(NSString *)cellName;
+
+@end
+
+@interface UITableViewCell(NMCustomCell)
+
+@property (nonatomic, weak) UITableView * nm_tableView;
+
+
+@end
