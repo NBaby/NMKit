@@ -8,6 +8,7 @@
 
 #import "PZHSingleLabelShowController.h"
 #import "PZHSingleLabelCell.h"
+#import "NMAutoHeightTableCell.h"
 @interface PZHSingleLabelShowController ()
 
 @end

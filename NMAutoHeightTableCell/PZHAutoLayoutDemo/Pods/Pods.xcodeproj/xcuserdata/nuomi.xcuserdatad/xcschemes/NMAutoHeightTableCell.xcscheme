@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FFEC19DB9BD4B684C8AAD134AB58ADE0'
-               BlueprintName = 'Pods-PZHAutoLayoutDemo'
+               BlueprintIdentifier = '1BB281373DA7D495D417A12B06B2CAF1'
+               BlueprintName = 'NMAutoHeightTableCell'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-PZHAutoLayoutDemo.a'>
+               BuildableName = 'libNMAutoHeightTableCell.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

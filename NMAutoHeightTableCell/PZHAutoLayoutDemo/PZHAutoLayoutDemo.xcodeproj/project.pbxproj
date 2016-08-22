@@ -13,7 +13,6 @@
 		31039A5E1D2B886C001FA587 /* PZHComplexAutoLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31039A5C1D2B886C001FA587 /* PZHComplexAutoLayoutCell.m */; };
 		31039A5F1D2B886C001FA587 /* PZHComplexAutoLayoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31039A5D1D2B886C001FA587 /* PZHComplexAutoLayoutCell.xib */; };
 		31039A611D2B8BA5001FA587 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31039A601D2B8BA5001FA587 /* image.xcassets */; };
-		312891531D2B4D92002C10EC /* NMAutoHeightTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 312891521D2B4D92002C10EC /* NMAutoHeightTableCell.m */; };
 		3128915D1D2B50B3002C10EC /* PZHSingleLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3128915C1D2B50B3002C10EC /* PZHSingleLabelViewController.m */; };
 		3128915F1D2B50CD002C10EC /* PZHSingleLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3128915E1D2B50CD002C10EC /* PZHSingleLabelViewController.xib */; };
 		312891631D2B51EA002C10EC /* PZHSingleLabelShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 312891611D2B51EA002C10EC /* PZHSingleLabelShowController.m */; };
@@ -59,8 +58,6 @@
 		31039A5C1D2B886C001FA587 /* PZHComplexAutoLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZHComplexAutoLayoutCell.m; sourceTree = "<group>"; };
 		31039A5D1D2B886C001FA587 /* PZHComplexAutoLayoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PZHComplexAutoLayoutCell.xib; sourceTree = "<group>"; };
 		31039A601D2B8BA5001FA587 /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
-		312891511D2B4D92002C10EC /* NMAutoHeightTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMAutoHeightTableCell.h; sourceTree = "<group>"; };
-		312891521D2B4D92002C10EC /* NMAutoHeightTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMAutoHeightTableCell.m; sourceTree = "<group>"; };
 		3128915B1D2B50B3002C10EC /* PZHSingleLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZHSingleLabelViewController.h; sourceTree = "<group>"; };
 		3128915C1D2B50B3002C10EC /* PZHSingleLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZHSingleLabelViewController.m; sourceTree = "<group>"; };
 		3128915E1D2B50CD002C10EC /* PZHSingleLabelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PZHSingleLabelViewController.xib; sourceTree = "<group>"; };
@@ -168,8 +165,6 @@
 		312891501D2B4D57002C10EC /* NMAutoHeightTableCell */ = {
 			isa = PBXGroup;
 			children = (
-				312891511D2B4D92002C10EC /* NMAutoHeightTableCell.h */,
-				312891521D2B4D92002C10EC /* NMAutoHeightTableCell.m */,
 			);
 			path = NMAutoHeightTableCell;
 			sourceTree = "<group>";
@@ -490,7 +485,6 @@
 				312891631D2B51EA002C10EC /* PZHSingleLabelShowController.m in Sources */,
 				31755FC41D26085500DB2ECD /* ViewController.m in Sources */,
 				3128915D1D2B50B3002C10EC /* PZHSingleLabelViewController.m in Sources */,
-				312891531D2B4D92002C10EC /* NMAutoHeightTableCell.m in Sources */,
 				312891681D2B529B002C10EC /* PZHSingleLabelCell.m in Sources */,
 				31755FC11D26085500DB2ECD /* AppDelegate.m in Sources */,
 				31039A5E1D2B886C001FA587 /* PZHComplexAutoLayoutCell.m in Sources */,
