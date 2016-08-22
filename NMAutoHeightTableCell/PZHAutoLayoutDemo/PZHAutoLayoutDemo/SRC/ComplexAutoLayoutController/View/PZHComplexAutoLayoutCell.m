@@ -37,17 +37,3 @@
 }
 
 @end
-@implementation  UITableView(PZHComplexAutoLayoutCell)
-
-- (PZHComplexAutoLayoutCell *)PZHComplexAutoLayoutCell {
-    static NSString *CellIdentifier = @"PZHComplexAutoLayoutCell";
-    PZHComplexAutoLayoutCell *Cell=(PZHComplexAutoLayoutCell *)[self dequeueReusableCellWithIdentifier:CellIdentifier];
-    if(nil==Cell) {
-        UINib *nib = [UINib nibWithNibName:CellIdentifier bundle:nil];
-        [self registerNib:nib forCellReuseIdentifier:CellIdentifier];
-        Cell = (PZHComplexAutoLayoutCell *)[self dequeueReusableCellWithIdentifier:CellIdentifier];
-    }
-    Cell.selectionStyle=UITableViewCellSelectionStyleNone;
-    return Cell;
-}
-@end

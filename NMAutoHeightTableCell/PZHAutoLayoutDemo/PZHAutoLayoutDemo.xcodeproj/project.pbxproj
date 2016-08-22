@@ -28,6 +28,7 @@
 		31755FCC1D26085500DB2ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31755FCA1D26085500DB2ECD /* LaunchScreen.storyboard */; };
 		31755FD71D26085500DB2ECD /* PZHAutoLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31755FD61D26085500DB2ECD /* PZHAutoLayoutDemoTests.m */; };
 		31755FE21D26085500DB2ECD /* PZHAutoLayoutDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31755FE11D26085500DB2ECD /* PZHAutoLayoutDemoUITests.m */; };
+		E4EED83DBBE993065F03741E /* libPods-PZHAutoLayoutDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C30F331D3DF3B34728A194 /* libPods-PZHAutoLayoutDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		018A3E0C74815DF4F313B53A /* Pods-PZHAutoLayoutDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PZHAutoLayoutDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PZHAutoLayoutDemo/Pods-PZHAutoLayoutDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		31039A531D2B86B7001FA587 /* PZHComplexAutoLayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZHComplexAutoLayoutController.h; sourceTree = "<group>"; };
 		31039A541D2B86B7001FA587 /* PZHComplexAutoLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZHComplexAutoLayoutController.m; sourceTree = "<group>"; };
 		31039A551D2B86B7001FA587 /* PZHComplexAutoLayoutController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PZHComplexAutoLayoutController.xib; sourceTree = "<group>"; };
@@ -84,6 +86,8 @@
 		31755FDD1D26085500DB2ECD /* PZHAutoLayoutDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PZHAutoLayoutDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31755FE11D26085500DB2ECD /* PZHAutoLayoutDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZHAutoLayoutDemoUITests.m; sourceTree = "<group>"; };
 		31755FE31D26085500DB2ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2C30F331D3DF3B34728A194 /* libPods-PZHAutoLayoutDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PZHAutoLayoutDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A343D302D6D3854BA2482D /* Pods-PZHAutoLayoutDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PZHAutoLayoutDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PZHAutoLayoutDemo/Pods-PZHAutoLayoutDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4EED83DBBE993065F03741E /* libPods-PZHAutoLayoutDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +222,8 @@
 				31755FD51D26085500DB2ECD /* PZHAutoLayoutDemoTests */,
 				31755FE01D26085500DB2ECD /* PZHAutoLayoutDemoUITests */,
 				31755FBA1D26085500DB2ECD /* Products */,
+				B95ADB6CBE70922F6949219F /* Pods */,
+				83EA61EDB0170243E07CC782 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,6 +281,23 @@
 			path = PZHAutoLayoutDemoUITests;
 			sourceTree = "<group>";
 		};
+		83EA61EDB0170243E07CC782 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2C30F331D3DF3B34728A194 /* libPods-PZHAutoLayoutDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B95ADB6CBE70922F6949219F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				018A3E0C74815DF4F313B53A /* Pods-PZHAutoLayoutDemo.debug.xcconfig */,
+				B5A343D302D6D3854BA2482D /* Pods-PZHAutoLayoutDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,9 +305,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31755FE61D26085500DB2ECD /* Build configuration list for PBXNativeTarget "PZHAutoLayoutDemo" */;
 			buildPhases = (
+				9F5F211E4474FD2A74502199 /* [CP] Check Pods Manifest.lock */,
 				31755FB51D26085500DB2ECD /* Sources */,
 				31755FB61D26085500DB2ECD /* Frameworks */,
 				31755FB71D26085500DB2ECD /* Resources */,
+				F3281646BC4757DBBB509E97 /* [CP] Embed Pods Frameworks */,
+				FBC3843A54488C8061A1F301 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -404,6 +431,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F5F211E4474FD2A74502199 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F3281646BC4757DBBB509E97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PZHAutoLayoutDemo/Pods-PZHAutoLayoutDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBC3843A54488C8061A1F301 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PZHAutoLayoutDemo/Pods-PZHAutoLayoutDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31755FB51D26085500DB2ECD /* Sources */ = {
@@ -560,6 +635,7 @@
 		};
 		31755FE71D26085500DB2ECD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 018A3E0C74815DF4F313B53A /* Pods-PZHAutoLayoutDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PZHAutoLayoutDemo/Info.plist;
@@ -571,6 +647,7 @@
 		};
 		31755FE81D26085500DB2ECD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5A343D302D6D3854BA2482D /* Pods-PZHAutoLayoutDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PZHAutoLayoutDemo/Info.plist;

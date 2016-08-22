@@ -14,6 +14,3 @@
 @property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *remarkLabel;
 @end
-@interface UITableView(PZHComplexAutoLayoutCell)
-- (PZHComplexAutoLayoutCell*)PZHComplexAutoLayoutCell;
-@end

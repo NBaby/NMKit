@@ -42,13 +42,13 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    PZHComplexAutoLayoutCell * cell = [tableView PZHComplexAutoLayoutCell];
+    PZHComplexAutoLayoutCell * cell = (PZHComplexAutoLayoutCell *)[tableView nm_customCellWithCellName:@"PZHComplexAutoLayoutCell"];
     [cell setInfo:dataArray[indexPath.row]];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    PZHComplexAutoLayoutCell * cell = [tableView PZHComplexAutoLayoutCell];
+       PZHComplexAutoLayoutCell * cell = (PZHComplexAutoLayoutCell *)[tableView nm_customCellWithCellName:@"PZHComplexAutoLayoutCell"];
    float height =  [cell getHeightWidthInfo:dataArray[indexPath.row]];
     return height;
 }

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class YYMemoryCache;
+
 @interface NMAutoHeightTableCell : UITableViewCell
 
 /**
@@ -26,9 +28,9 @@
 
 @interface UITableView(NMCustomTableView)
 
-@property (nonatomic, strong) NSMutableDictionary * cellHeightCache;
+@property (nonatomic, strong) YYMemoryCache * cellHeightCache;
 
-- (UITableViewCell *)customCellWithCellName:(NSString *)cellName;
+- (UITableViewCell *)nm_customCellWithCellName:(NSString *)cellName;
 
 @end
 

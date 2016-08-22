@@ -31,12 +31,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    PZHSingleLabelCell * cell = (PZHSingleLabelCell *)[tableView customCellWithCellName:@"PZHSingleLabelCell"];
+    PZHSingleLabelCell * cell = (PZHSingleLabelCell *)[tableView nm_customCellWithCellName:@"PZHSingleLabelCell"];
     [cell setInfo:_cellContentStr];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    PZHSingleLabelCell * cell = (PZHSingleLabelCell *)[tableView customCellWithCellName:@"PZHSingleLabelCell"];
+    PZHSingleLabelCell * cell = (PZHSingleLabelCell *)[tableView nm_customCellWithCellName:@"PZHSingleLabelCell"];
    return  [cell getHeightWidthInfo:_cellContentStr];
 }
 #pragma mark - custonDelegate
