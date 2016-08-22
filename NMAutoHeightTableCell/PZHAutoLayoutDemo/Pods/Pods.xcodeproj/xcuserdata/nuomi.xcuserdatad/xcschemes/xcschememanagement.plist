@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>NMAutoHeightTableCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PZHAutoLayoutDemo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,27 +32,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1FEC2070E7061D5DAB4C875221310890</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>62C1E3E1B05311F123201A68B22E56DC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>93136571F22E889296DEF92239C25A8C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A0358C723C35D94FBA12C62283DDAB2C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B58F930E216CD9E784AF7BEB7BF55F5E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
