@@ -68,7 +68,15 @@
     [self layoutIfNeeded];
     height = [self.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height ;
     [self.nm_tableView.cellHeightCache setObject:@(height) forKey:cacheKey];
-    return  height;
+    
+    if (self.nm_tableView.separatorStyle == UITableViewCellSeparatorStyleNone) {
+        return height;
+    }
+    else {
+        //如果用了系统的线，则高度要加一
+        return  height + 1;
+    }
+    
 }
 @end
 

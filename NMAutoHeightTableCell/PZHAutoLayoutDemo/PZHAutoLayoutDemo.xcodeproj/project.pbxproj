@@ -27,6 +27,8 @@
 		31755FCC1D26085500DB2ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31755FCA1D26085500DB2ECD /* LaunchScreen.storyboard */; };
 		31755FD71D26085500DB2ECD /* PZHAutoLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31755FD61D26085500DB2ECD /* PZHAutoLayoutDemoTests.m */; };
 		31755FE21D26085500DB2ECD /* PZHAutoLayoutDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31755FE11D26085500DB2ECD /* PZHAutoLayoutDemoUITests.m */; };
+		31ACB4B51D6C31D100EA786D /* NMAutoHeightTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ACB4B31D6C31D100EA786D /* NMAutoHeightTableCell.m */; };
+		31ACB4B61D6C31D100EA786D /* NMAutoHeightTableCell.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 31ACB4B41D6C31D100EA786D /* NMAutoHeightTableCell.podspec */; };
 		E4EED83DBBE993065F03741E /* libPods-PZHAutoLayoutDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C30F331D3DF3B34728A194 /* libPods-PZHAutoLayoutDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +85,9 @@
 		31755FDD1D26085500DB2ECD /* PZHAutoLayoutDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PZHAutoLayoutDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31755FE11D26085500DB2ECD /* PZHAutoLayoutDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZHAutoLayoutDemoUITests.m; sourceTree = "<group>"; };
 		31755FE31D26085500DB2ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31ACB4B21D6C31D100EA786D /* NMAutoHeightTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMAutoHeightTableCell.h; sourceTree = "<group>"; };
+		31ACB4B31D6C31D100EA786D /* NMAutoHeightTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMAutoHeightTableCell.m; sourceTree = "<group>"; };
+		31ACB4B41D6C31D100EA786D /* NMAutoHeightTableCell.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NMAutoHeightTableCell.podspec; sourceTree = "<group>"; };
 		B2C30F331D3DF3B34728A194 /* libPods-PZHAutoLayoutDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PZHAutoLayoutDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A343D302D6D3854BA2482D /* Pods-PZHAutoLayoutDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PZHAutoLayoutDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PZHAutoLayoutDemo/Pods-PZHAutoLayoutDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,18 +160,11 @@
 		3128914F1D2B4D57002C10EC /* SRC */ = {
 			isa = PBXGroup;
 			children = (
+				31ACB4B11D6C31D100EA786D /* lib */,
 				31039A4F1D2B8681001FA587 /* ComplexAutoLayoutController */,
 				312891541D2B5048002C10EC /* SingleLabelAutoLayoutController */,
-				312891501D2B4D57002C10EC /* NMAutoHeightTableCell */,
 			);
 			path = SRC;
-			sourceTree = "<group>";
-		};
-		312891501D2B4D57002C10EC /* NMAutoHeightTableCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NMAutoHeightTableCell;
 			sourceTree = "<group>";
 		};
 		312891541D2B5048002C10EC /* SingleLabelAutoLayoutController */ = {
@@ -274,6 +272,16 @@
 				31755FE31D26085500DB2ECD /* Info.plist */,
 			);
 			path = PZHAutoLayoutDemoUITests;
+			sourceTree = "<group>";
+		};
+		31ACB4B11D6C31D100EA786D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				31ACB4B21D6C31D100EA786D /* NMAutoHeightTableCell.h */,
+				31ACB4B31D6C31D100EA786D /* NMAutoHeightTableCell.m */,
+				31ACB4B41D6C31D100EA786D /* NMAutoHeightTableCell.podspec */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		83EA61EDB0170243E07CC782 /* Frameworks */ = {
@@ -401,6 +409,7 @@
 			files = (
 				3128915F1D2B50CD002C10EC /* PZHSingleLabelViewController.xib in Resources */,
 				312891641D2B51EA002C10EC /* PZHSingleLabelShowController.xib in Resources */,
+				31ACB4B61D6C31D100EA786D /* NMAutoHeightTableCell.podspec in Resources */,
 				31039A571D2B86B7001FA587 /* PZHComplexAutoLayoutController.xib in Resources */,
 				31755FCC1D26085500DB2ECD /* LaunchScreen.storyboard in Resources */,
 				312891691D2B529B002C10EC /* PZHSingleLabelCell.xib in Resources */,
@@ -483,6 +492,7 @@
 				31039A5A1D2B87EC001FA587 /* PZHItemModel.m in Sources */,
 				31039A561D2B86B7001FA587 /* PZHComplexAutoLayoutController.m in Sources */,
 				312891631D2B51EA002C10EC /* PZHSingleLabelShowController.m in Sources */,
+				31ACB4B51D6C31D100EA786D /* NMAutoHeightTableCell.m in Sources */,
 				31755FC41D26085500DB2ECD /* ViewController.m in Sources */,
 				3128915D1D2B50B3002C10EC /* PZHSingleLabelViewController.m in Sources */,
 				312891681D2B529B002C10EC /* PZHSingleLabelCell.m in Sources */,

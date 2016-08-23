@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FFEC19DB9BD4B684C8AAD134AB58ADE0'
+               BlueprintIdentifier = '1FEC2070E7061D5DAB4C875221310890'
                BlueprintName = 'Pods-PZHAutoLayoutDemo'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-PZHAutoLayoutDemo.a'>

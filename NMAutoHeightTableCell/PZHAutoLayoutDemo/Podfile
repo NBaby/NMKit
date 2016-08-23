@@ -2,5 +2,4 @@ platform :ios, ‘7.0‘
 target "PZHAutoLayoutDemo" do
 pod 'YYCache', '~> 1.0.3'
 pod 'YYModel', '~> 1.0.2'
-pod 'NMAutoHeightTableCell', '~> 0.1.1'
 end
