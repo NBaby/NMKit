@@ -1,15 +1,20 @@
 PODS:
+  - NMAutoHeightTableCell (0.1.2):
+    - YYCache (~> 1.0.3)
+    - YYModel (~> 1.0.2)
   - YYCache (1.0.3)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
+  - NMAutoHeightTableCell (~> 0.1.2)
   - YYCache (~> 1.0.3)
   - YYModel (~> 1.0.2)
 
 SPEC CHECKSUMS:
+  NMAutoHeightTableCell: 5a9936bebdd509da1675df7a7013814469fb876a
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: d36529f29918808a305bad462e65007b0ad64ec4
+PODFILE CHECKSUM: 1d66d05590e89eb894f687bc408af6a87dc7895d
 
 COCOAPODS: 1.0.1
