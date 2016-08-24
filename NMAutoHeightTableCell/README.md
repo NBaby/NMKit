@@ -1,5 +1,6 @@
 
 #使用AutoLayout自动计算可变cell高度
+pods:`pod 'NMAutoHeightTableCell', '~> 0.1.3'`
 ###方案一：死计算（传统、麻烦）
 这个方法应该大家都会，先摆放控件，然后根据Label里面的内容调用NSString的`sizeWithAttributes:@{NSFontAttributeName:font}`方法获得CGSize，然后根据CGSize累加高度，得出最后的高度。这个方法很普遍，但是如果控件多，Label的个数多，计算的代码就十分复杂，而且屏幕适配也有问题。
 ###方案二：AutoLayout实现自动计算（推荐）

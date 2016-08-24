@@ -76,7 +76,6 @@
         //如果用了系统的线，则高度要加一
         return  height + 1;
     }
-    
 }
 @end
 
@@ -88,8 +87,7 @@
     if(nil==Cell) {
         UINib *nib = [UINib nibWithNibName:cellName bundle:nil];
         [self registerNib:nib forCellReuseIdentifier:cellName];
-//        Cell = (UITableViewCell *)[self dequeueReusableCellWithIdentifier:cellName];
-        
+
     }
     Cell.nm_tableView = self;
     Cell.selectionStyle=UITableViewCellSelectionStyleNone;
