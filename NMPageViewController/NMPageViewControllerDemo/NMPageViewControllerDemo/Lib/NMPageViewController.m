@@ -20,8 +20,11 @@
     
     UIColor *btnNomalColor;
     
+    double slidingBlockWidth;
+    
     double screenWidth;
 }
+
 
 
 
@@ -34,6 +37,16 @@
  *  自己内部调用可以修改
  */
 @property (assign, nonatomic) NSInteger currentPage;
+
+/**
+ *  小滑块的宽度约束
+ */
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *slidingBlockWidthConstraint;
+
+/**
+ *  小滑块的位置约束
+ */
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *slidingBlockCoordinateConstraint;
 
 @end
 
@@ -69,7 +82,7 @@
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed{
    
     if (completed) {
-        _currentPage = [_viewControllersArray indexOfObject:[pageViewController viewControllers][0]];
+        self.currentPage = [_viewControllersArray indexOfObject:[pageViewController viewControllers][0]];
         _segmentBtnArray[_currentPage].selected = YES;
     }
    
@@ -86,7 +99,7 @@
     }
     const CGFloat * components1 = CGColorGetComponents(color1.CGColor);
     const CGFloat * components2 = CGColorGetComponents(color2.CGColor);
-    NSLog(@"ratio = %f",ratio);
+//    NSLog(@"ratio = %f",ratio);
     CGFloat r = components1[0]*ratio + components2[0]*(1-ratio);
     CGFloat g = components1[1]*ratio + components2[1]*(1-ratio);
     CGFloat b = components1[2]*ratio + components2[2]*(1-ratio);
@@ -151,8 +164,17 @@
             make.top.equalTo(_segmentView);
             
         }];
-        
     }
+    
+    if (_segmentTitleArray.count == 0) {
+        slidingBlockWidth = 0;
+    }
+    else {
+        slidingBlockWidth = screenWidth / _segmentTitleArray.count;
+    }
+    
+    _slidingBlockWidthConstraint.constant = screenWidth / _segmentBtnArray.count;
+    
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers{
@@ -169,7 +191,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     float offsetX = scrollow.contentOffset.x;
-    NSLog(@"x:%f",offsetX);
+//    NSLog(@"x:%f",offsetX);
     if (offsetX - screenWidth > 0 && _currentPage < _segmentTitleArray.count - 1) {
         //向右移
         UIColor * curColor = [self mixColor1:self.btnNomalColor color2:self.btnHighLightColor ratio:(offsetX - screenWidth)/screenWidth ];
@@ -179,7 +201,8 @@
          UIColor * rightBtnColor = [self mixColor1:self.btnHighLightColor color2:self.btnNomalColor ratio:(offsetX - screenWidth)/screenWidth ];
         _segmentBtnArray[_currentPage + 1].selected = NO;
         [_segmentBtnArray[_currentPage + 1] setTitleColor:rightBtnColor forState:UIControlStateNormal];
-        
+        //小滑块位置调整
+        _slidingBlockCoordinateConstraint.constant = (offsetX - screenWidth) / self.segmentTitleArray.count + slidingBlockWidth/2 + _currentPage * slidingBlockWidth - screenWidth/2;
     }
     else if (offsetX - screenWidth < 0 && _currentPage > 0){
         //向左移
@@ -190,7 +213,9 @@
         UIColor * rightBtnColor = [self mixColor1:self.btnHighLightColor color2: self.btnNomalColor ratio:(screenWidth -offsetX)/screenWidth ];
         _segmentBtnArray[_currentPage - 1].selected = NO;
         [_segmentBtnArray[_currentPage - 1] setTitleColor:rightBtnColor forState:UIControlStateNormal];
-        
+        //小滑块位置调整
+        _slidingBlockCoordinateConstraint.constant = (offsetX - screenWidth) / self.segmentTitleArray.count + slidingBlockWidth/2 + _currentPage * slidingBlockWidth - screenWidth/2;
+
     }
     else if (offsetX - screenWidth == 0){
         //将左右两边恢复
@@ -285,12 +310,17 @@
     _segmentBtnArray [_currentPage].selected = NO;
     _currentPage = currentPage;
     _segmentBtnArray [_currentPage].selected = YES;
+   
+    _slidingBlockCoordinateConstraint.constant = slidingBlockWidth/2 + _currentPage * slidingBlockWidth - screenWidth/2;
 }
 
 - (UIView *)backgroundView{
     return self.view;
 }
 
-
+-(void)setIsHideSlidingBlock:(BOOL)isHideSlidingBlock{
+    _isHideSlidingBlock = isHideSlidingBlock;
+    _slidingBlockView.hidden = isHideSlidingBlock;
+}
 
 @end

@@ -338,6 +338,7 @@
 				TargetAttributes = {
 					31A0EFF21D84F7E2008BDBEA = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = GQUVXPG592;
 					};
 					31A0F00B1D84F7E2008BDBEA = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -601,10 +602,13 @@
 			baseConfigurationReference = BC8B139041F45178B38D6BFE /* Pods-NMPageViewControllerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NMPageViewControllerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nuomi.NMPageViewControllerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -613,10 +617,13 @@
 			baseConfigurationReference = 8229D92341E2EB0967839EFE /* Pods-NMPageViewControllerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NMPageViewControllerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nuomi.NMPageViewControllerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

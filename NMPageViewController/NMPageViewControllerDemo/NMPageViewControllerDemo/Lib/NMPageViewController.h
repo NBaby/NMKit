@@ -60,4 +60,17 @@
  */
 
 @property (strong, nonatomic , readonly) UIView * backgroundView;
+
+/**
+ *  小滑块视图，可以更改颜色,是否隐藏等属性
+ */
+@property (weak, nonatomic) IBOutlet UIView *slidingBlockView;
+
+/**
+ *  是否隐藏小滑块,默认是不隐藏
+ */
+
+@property (assign, nonatomic) BOOL isHideSlidingBlock;
+
+
 @end
