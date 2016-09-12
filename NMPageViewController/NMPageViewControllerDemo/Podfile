@@ -1,0 +1,5 @@
+platform :ios, ‘7.0‘
+target "NMPageViewControllerDemo" do
+pod 'NMAutoHeightTableCell', '~> 0.1.3'
+pod 'Masonry', '~> 1.0.1'
+end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0301CD63E6A5BCE412B73B /* libPods-NMPageViewControllerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB39CE0F802D697B8ABA1D3 /* libPods-NMPageViewControllerDemo.a */; };
 		31A0EFF81D84F7E2008BDBEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0EFF71D84F7E2008BDBEA /* main.m */; };
 		31A0EFFB1D84F7E2008BDBEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0EFFA1D84F7E2008BDBEA /* AppDelegate.m */; };
 		31A0EFFE1D84F7E2008BDBEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0EFFD1D84F7E2008BDBEA /* ViewController.m */; };
@@ -19,6 +20,8 @@
 		31A0F0391D84F97D008BDBEA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0F0371D84F97D008BDBEA /* HomeViewController.xib */; };
 		31A0F03D1D84FDF7008BDBEA /* NMPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0F03B1D84FDF7008BDBEA /* NMPageViewController.m */; };
 		31A0F03E1D84FDF7008BDBEA /* NMPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0F03C1D84FDF7008BDBEA /* NMPageViewController.xib */; };
+		31A0F0461D85341E008BDBEA /* SubPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0F0441D85341E008BDBEA /* SubPageController.m */; };
+		31A0F0471D85341E008BDBEA /* SubPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0F0451D85341E008BDBEA /* SubPageController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BB39CE0F802D697B8ABA1D3 /* libPods-NMPageViewControllerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NMPageViewControllerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A0EFF31D84F7E2008BDBEA /* NMPageViewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NMPageViewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A0EFF71D84F7E2008BDBEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		31A0EFF91D84F7E2008BDBEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +65,11 @@
 		31A0F03A1D84FDF7008BDBEA /* NMPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMPageViewController.h; sourceTree = "<group>"; };
 		31A0F03B1D84FDF7008BDBEA /* NMPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMPageViewController.m; sourceTree = "<group>"; };
 		31A0F03C1D84FDF7008BDBEA /* NMPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMPageViewController.xib; sourceTree = "<group>"; };
+		31A0F0431D85341E008BDBEA /* SubPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubPageController.h; sourceTree = "<group>"; };
+		31A0F0441D85341E008BDBEA /* SubPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubPageController.m; sourceTree = "<group>"; };
+		31A0F0451D85341E008BDBEA /* SubPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubPageController.xib; sourceTree = "<group>"; };
+		8229D92341E2EB0967839EFE /* Pods-NMPageViewControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NMPageViewControllerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NMPageViewControllerDemo/Pods-NMPageViewControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BC8B139041F45178B38D6BFE /* Pods-NMPageViewControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NMPageViewControllerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NMPageViewControllerDemo/Pods-NMPageViewControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0301CD63E6A5BCE412B73B /* libPods-NMPageViewControllerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22021641E9D8D0CE391B361C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BB39CE0F802D697B8ABA1D3 /* libPods-NMPageViewControllerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		31A0EFEA1D84F7E2008BDBEA = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +113,8 @@
 				31A0F00F1D84F7E2008BDBEA /* NMPageViewControllerDemoTests */,
 				31A0F01A1D84F7E2008BDBEA /* NMPageViewControllerDemoUITests */,
 				31A0EFF41D84F7E2008BDBEA /* Products */,
+				FB23046F67D64AC892B8E223 /* Pods */,
+				22021641E9D8D0CE391B361C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +175,7 @@
 		31A0F0291D84F85E008BDBEA /* SRC */ = {
 			isa = PBXGroup;
 			children = (
+				31A0F03F1D8533DA008BDBEA /* SubViewController */,
 				31A0F02B1D84F8E0008BDBEA /* HomeViewController */,
 			);
 			path = SRC;
@@ -204,6 +225,49 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		31A0F03F1D8533DA008BDBEA /* SubViewController */ = {
+			isa = PBXGroup;
+			children = (
+				31A0F0421D85340B008BDBEA /* View */,
+				31A0F0411D853404008BDBEA /* Model */,
+				31A0F0401D8533FB008BDBEA /* Controller */,
+			);
+			path = SubViewController;
+			sourceTree = "<group>";
+		};
+		31A0F0401D8533FB008BDBEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				31A0F0431D85341E008BDBEA /* SubPageController.h */,
+				31A0F0441D85341E008BDBEA /* SubPageController.m */,
+				31A0F0451D85341E008BDBEA /* SubPageController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		31A0F0411D853404008BDBEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		31A0F0421D85340B008BDBEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB23046F67D64AC892B8E223 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC8B139041F45178B38D6BFE /* Pods-NMPageViewControllerDemo.debug.xcconfig */,
+				8229D92341E2EB0967839EFE /* Pods-NMPageViewControllerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,9 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31A0F0201D84F7E3008BDBEA /* Build configuration list for PBXNativeTarget "NMPageViewControllerDemo" */;
 			buildPhases = (
+				CCB45F259D0159F5647C6867 /* [CP] Check Pods Manifest.lock */,
 				31A0EFEF1D84F7E2008BDBEA /* Sources */,
 				31A0EFF01D84F7E2008BDBEA /* Frameworks */,
 				31A0EFF11D84F7E2008BDBEA /* Resources */,
+				1AA3F6FDBE2821C27CD04444 /* [CP] Embed Pods Frameworks */,
+				9824FD7A132889D36F7D0137 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,6 +377,7 @@
 				31A0F0061D84F7E2008BDBEA /* LaunchScreen.storyboard in Resources */,
 				31A0F03E1D84FDF7008BDBEA /* NMPageViewController.xib in Resources */,
 				31A0F0031D84F7E2008BDBEA /* Assets.xcassets in Resources */,
+				31A0F0471D85341E008BDBEA /* SubPageController.xib in Resources */,
 				31A0F0011D84F7E2008BDBEA /* Main.storyboard in Resources */,
 				31A0F0391D84F97D008BDBEA /* HomeViewController.xib in Resources */,
 			);
@@ -331,6 +399,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AA3F6FDBE2821C27CD04444 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NMPageViewControllerDemo/Pods-NMPageViewControllerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9824FD7A132889D36F7D0137 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NMPageViewControllerDemo/Pods-NMPageViewControllerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCB45F259D0159F5647C6867 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		31A0EFEF1D84F7E2008BDBEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -341,6 +457,7 @@
 				31A0F03D1D84FDF7008BDBEA /* NMPageViewController.m in Sources */,
 				31A0EFF81D84F7E2008BDBEA /* main.m in Sources */,
 				31A0F0381D84F97D008BDBEA /* HomeViewController.m in Sources */,
+				31A0F0461D85341E008BDBEA /* SubPageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +598,7 @@
 		};
 		31A0F0211D84F7E3008BDBEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC8B139041F45178B38D6BFE /* Pods-NMPageViewControllerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NMPageViewControllerDemo/Info.plist;
@@ -492,6 +610,7 @@
 		};
 		31A0F0221D84F7E3008BDBEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8229D92341E2EB0967839EFE /* Pods-NMPageViewControllerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NMPageViewControllerDemo/Info.plist;
@@ -566,6 +685,7 @@
 				31A0F0221D84F7E3008BDBEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31A0F0231D84F7E3008BDBEA /* Build configuration list for PBXNativeTarget "NMPageViewControllerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +694,7 @@
 				31A0F0251D84F7E3008BDBEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31A0F0261D84F7E3008BDBEA /* Build configuration list for PBXNativeTarget "NMPageViewControllerDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +703,7 @@
 				31A0F0281D84F7E3008BDBEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
