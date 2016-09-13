@@ -23,9 +23,6 @@
     [super viewDidLoad];
     [self initNavigationController];
     
-  
-   
-    
     NSMutableArray * mutableArray = [[NSMutableArray alloc]init];
     SubPageController * redController = [[SubPageController alloc]init];
     redController.color = [UIColor redColor];
