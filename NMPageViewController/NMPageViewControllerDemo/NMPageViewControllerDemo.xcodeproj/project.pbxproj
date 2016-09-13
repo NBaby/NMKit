@@ -188,7 +188,8 @@
 				31A0F03B1D84FDF7008BDBEA /* NMPageViewController.m */,
 				31A0F03C1D84FDF7008BDBEA /* NMPageViewController.xib */,
 			);
-			path = Lib;
+			name = Lib;
+			path = ../../lib;
 			sourceTree = "<group>";
 		};
 		31A0F02B1D84F8E0008BDBEA /* HomeViewController */ = {
