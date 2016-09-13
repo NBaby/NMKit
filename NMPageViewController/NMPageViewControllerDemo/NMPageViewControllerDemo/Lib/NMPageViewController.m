@@ -25,8 +25,14 @@
     double screenWidth;
 }
 
-
-
+/**
+ *  线
+ */
+@property (weak, nonatomic) IBOutlet UIView *segmentBottomLine;
+/**
+ *  线的高度
+ */
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lineHeightConstraint;
 
 /**
  *  顶部按钮视图高度约束
@@ -50,6 +56,7 @@
 
 @end
 
+
 @implementation NMPageViewController
 @synthesize btnHighLightColor,btnNomalColor;
 
@@ -57,6 +64,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     screenWidth = [UIScreen mainScreen].bounds.size.width;
+    _lineHeightConstraint.constant = 0.5;
 }
 
 #pragma mark - UIPageViewControllerDelegate
@@ -86,9 +94,39 @@
         _segmentBtnArray[_currentPage].selected = YES;
     }
    
+    if ([self.delegate respondsToSelector:@selector(pageViewController:didFinishAnimating:previousViewControllers:transitionCompleted:)]) {
+        [self.delegate pageViewController:pageViewController didFinishAnimating:finished previousViewControllers:previousViewControllers transitionCompleted:completed];
+    }
     
 }
+
+
+
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers{
+    if (scrollow == nil) {
+        //获得scrollView控制权
+        for (int i= 0 ; i < pageViewController.view.subviews.count; i++) {
+            if ([pageViewController.view.subviews[i] isKindOfClass:[UIScrollView class]]) {
+                scrollow =  pageViewController.view.subviews[i];
+            }
+        }
+        scrollow.delegate = self;
+    }
+    if ([self.delegate respondsToSelector:@selector(pageViewController:willTransitionToViewControllers:)]) {
+        [self.delegate pageViewController:pageViewController willTransitionToViewControllers:pendingViewControllers];
+    }
+}
 #pragma mark - PriVateMethod
+#pragma mark 初始化方法
+- (instancetype)initWithTitles:(NSArray *)titleArray viewControllers:(NSArray *)viewControllerArray delegate:(id<NMPageViewControllerDelegate>) delegate{
+    self = [super init];
+    if (self) {
+        self.segmentTitleArray = titleArray;
+        self.viewControllersArray = viewControllerArray;
+        self.delegate = delegate;
+    }
+    return self;
+}
 #pragma mark 颜色渐变算法
 - (UIColor *)mixColor1:(UIColor*)color1 color2:(UIColor *)color2 ratio:(CGFloat)ratio
 {
@@ -177,17 +215,7 @@
     
 }
 
-- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers{
-    if (scrollow == nil) {
-        //获得scrollView控制权
-        for (int i= 0 ; i < pageViewController.view.subviews.count; i++) {
-            if ([pageViewController.view.subviews[i] isKindOfClass:[UIScrollView class]]) {
-                scrollow =  pageViewController.view.subviews[i];
-            }
-        }
-        scrollow.delegate = self;
-    }
-}
+
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     float offsetX = scrollow.contentOffset.x;
@@ -230,8 +258,24 @@
         
     }
   
+    if ([self.delegate respondsToSelector:@selector(pageViewDidScroll:)]) {
+        [self.delegate pageViewDidScroll:scrollow];
+    }
     
-    
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+
+    if ([self.delegate respondsToSelector:@selector(pageViewWillBeginDragging:)]) {
+        [self.delegate pageViewWillBeginDragging:scrollow];
+    }
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    if ([self.delegate respondsToSelector:@selector(pageViewDidEndScrollingAnimation:)]) {
+        [self.delegate pageViewDidEndScrollingAnimation:scrollow];
+    }
+
 }
 #pragma mark - EventResponse
 #pragma mark 点击segment按钮
@@ -245,7 +289,6 @@
             [mainPageViewController setViewControllers:@[_viewControllersArray[btn.tag]] direction: UIPageViewControllerNavigationDirectionReverse  animated:_scrollAnimation completion:nil];
         }
         self.currentPage = btn.tag;
-        
     }
 }
 #pragma mark - Network

@@ -8,7 +8,38 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol NMPageViewControllerDelegate <NSObject>
+
+// Sent when a gesture-initiated transition begins.
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers NS_AVAILABLE_IOS(6_0);
+
+// Sent when a gesture-initiated transition ends. The 'finished' parameter indicates whether the animation finished, while the 'completed' parameter indicates whether the transition completed or bailed out (if the user let go early).
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed;
+/**
+ *  pageView滑动响应
+ *
+ *  @param scrollView pageView的ScrollView
+ */
+- (void)pageViewDidScroll:(UIScrollView *)scrollView;
+/**
+ *  pageView开始滑动响应
+ *
+ *  @param scrollView pageView的ScrollView
+ */
+- (void)pageViewWillBeginDragging:(UIScrollView *)scrollView;
+/**
+ *  pageView结束滑动响应
+ *
+ *  @param scrollView pageView的ScrollView
+ */
+- (void)pageViewDidEndScrollingAnimation:(UIScrollView *)scrollView;
+
+@end
 @interface NMPageViewController : UIViewController
+/**
+ *  代理
+ */
+@property (weak, nonatomic) id <NMPageViewControllerDelegate> delegate;
 
 /**
  *  顶部按钮视图
@@ -71,6 +102,14 @@
  */
 
 @property (assign, nonatomic) BOOL isHideSlidingBlock;
-
-
+/**
+ *  初始化方法
+ *
+ *  @param titleArray          segment显示按钮标题数组
+ *  @param viewControllerArray pageViewController的子视图控制器
+ *
+ *
+ *  @return NMPageViewController
+ */
+- (instancetype)initWithTitles:(NSArray *)titleArray viewControllers:(NSArray *)viewControllerArray delegate:(id<NMPageViewControllerDelegate>) delegate;
 @end

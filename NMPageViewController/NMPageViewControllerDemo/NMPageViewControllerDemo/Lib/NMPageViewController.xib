@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NMPageViewController">
             <connections>
+                <outlet property="lineHeightConstraint" destination="kXE-jL-G2X" id="1bo-2V-NrQ"/>
+                <outlet property="segmentBottomLine" destination="bqQ-Yt-4Y6" id="JTG-S8-KYg"/>
                 <outlet property="segmentHeightConstraint" destination="63J-ZJ-eip" id="Kmm-Kv-5O0"/>
                 <outlet property="segmentView" destination="Leo-3a-KT0" id="FVX-qU-mHN"/>
                 <outlet property="slidingBlockCoordinateConstraint" destination="WGf-GD-JTH" id="XQs-nk-cG3"/>
@@ -33,11 +35,21 @@
                                 <constraint firstAttribute="width" constant="82" id="hIX-lM-S1i"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqQ-Yt-4Y6">
+                            <rect key="frame" x="0.0" y="39" width="320" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="kXE-jL-G2X"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="bqQ-Yt-4Y6" firstAttribute="leading" secondItem="Leo-3a-KT0" secondAttribute="leading" id="0er-oZ-yW0"/>
                         <constraint firstAttribute="height" constant="40" id="63J-ZJ-eip"/>
+                        <constraint firstAttribute="trailing" secondItem="bqQ-Yt-4Y6" secondAttribute="trailing" id="8fw-PP-LHt"/>
                         <constraint firstItem="GUD-eT-ciV" firstAttribute="centerX" secondItem="Leo-3a-KT0" secondAttribute="centerXWithinMargins" constant="-119" id="WGf-GD-JTH"/>
+                        <constraint firstAttribute="bottom" secondItem="bqQ-Yt-4Y6" secondAttribute="bottom" id="a2n-fN-5O7"/>
                         <constraint firstAttribute="bottom" secondItem="GUD-eT-ciV" secondAttribute="bottom" id="yuw-xP-Tdb"/>
                     </constraints>
                 </view>
