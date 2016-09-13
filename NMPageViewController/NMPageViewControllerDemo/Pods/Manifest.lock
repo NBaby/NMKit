@@ -3,19 +3,23 @@ PODS:
   - NMAutoHeightTableCell (0.1.3):
     - YYCache (~> 1.0.3)
     - YYModel (~> 1.0.2)
+  - NMPageViewController (0.0.4):
+    - Masonry (~> 1.0.1)
   - YYCache (1.0.3)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - Masonry (~> 1.0.1)
   - NMAutoHeightTableCell (~> 0.1.3)
+  - NMPageViewController (~> 0.0.4)
 
 SPEC CHECKSUMS:
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   NMAutoHeightTableCell: 3a831dc5a095c609a185907ccf4bd95809170296
+  NMPageViewController: a6e95a869ed534711a5a4b94b2b2b0cfb199dc32
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: d86e2e997a630c345ddabf1905124f6562562e45
+PODFILE CHECKSUM: ac7872f0b2e400c58277c073513753ed89f6b5fc
 
 COCOAPODS: 1.0.1

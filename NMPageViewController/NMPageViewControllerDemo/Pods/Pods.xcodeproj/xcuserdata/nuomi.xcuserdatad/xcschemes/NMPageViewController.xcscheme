@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '91AA19AE9483A8234793A6DF7D1A5A0E'
-               BlueprintName = 'Pods-NMPageViewControllerDemo'
+               BlueprintIdentifier = 'CC9E4FE20ECC9274B888DD2C46873582'
+               BlueprintName = 'NMPageViewController'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-NMPageViewControllerDemo.a'>
+               BuildableName = 'libNMPageViewController.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

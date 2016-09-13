@@ -18,8 +18,6 @@
 		31A0F01C1D84F7E3008BDBEA /* NMPageViewControllerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0F01B1D84F7E3008BDBEA /* NMPageViewControllerDemoUITests.m */; };
 		31A0F0381D84F97D008BDBEA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0F0361D84F97D008BDBEA /* HomeViewController.m */; };
 		31A0F0391D84F97D008BDBEA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0F0371D84F97D008BDBEA /* HomeViewController.xib */; };
-		31A0F03D1D84FDF7008BDBEA /* NMPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0F03B1D84FDF7008BDBEA /* NMPageViewController.m */; };
-		31A0F03E1D84FDF7008BDBEA /* NMPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0F03C1D84FDF7008BDBEA /* NMPageViewController.xib */; };
 		31A0F0461D85341E008BDBEA /* SubPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0F0441D85341E008BDBEA /* SubPageController.m */; };
 		31A0F0471D85341E008BDBEA /* SubPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0F0451D85341E008BDBEA /* SubPageController.xib */; };
 /* End PBXBuildFile section */
@@ -62,9 +60,6 @@
 		31A0F0351D84F97D008BDBEA /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		31A0F0361D84F97D008BDBEA /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		31A0F0371D84F97D008BDBEA /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		31A0F03A1D84FDF7008BDBEA /* NMPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMPageViewController.h; sourceTree = "<group>"; };
-		31A0F03B1D84FDF7008BDBEA /* NMPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMPageViewController.m; sourceTree = "<group>"; };
-		31A0F03C1D84FDF7008BDBEA /* NMPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMPageViewController.xib; sourceTree = "<group>"; };
 		31A0F0431D85341E008BDBEA /* SubPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubPageController.h; sourceTree = "<group>"; };
 		31A0F0441D85341E008BDBEA /* SubPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubPageController.m; sourceTree = "<group>"; };
 		31A0F0451D85341E008BDBEA /* SubPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubPageController.xib; sourceTree = "<group>"; };
@@ -131,7 +126,6 @@
 		31A0EFF51D84F7E2008BDBEA /* NMPageViewControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				31A0F02A1D84F869008BDBEA /* Lib */,
 				31A0F0291D84F85E008BDBEA /* SRC */,
 				31A0EFF91D84F7E2008BDBEA /* AppDelegate.h */,
 				31A0EFFA1D84F7E2008BDBEA /* AppDelegate.m */,
@@ -179,17 +173,6 @@
 				31A0F02B1D84F8E0008BDBEA /* HomeViewController */,
 			);
 			path = SRC;
-			sourceTree = "<group>";
-		};
-		31A0F02A1D84F869008BDBEA /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				31A0F03A1D84FDF7008BDBEA /* NMPageViewController.h */,
-				31A0F03B1D84FDF7008BDBEA /* NMPageViewController.m */,
-				31A0F03C1D84FDF7008BDBEA /* NMPageViewController.xib */,
-			);
-			name = Lib;
-			path = ../../lib;
 			sourceTree = "<group>";
 		};
 		31A0F02B1D84F8E0008BDBEA /* HomeViewController */ = {
@@ -377,7 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A0F0061D84F7E2008BDBEA /* LaunchScreen.storyboard in Resources */,
-				31A0F03E1D84FDF7008BDBEA /* NMPageViewController.xib in Resources */,
 				31A0F0031D84F7E2008BDBEA /* Assets.xcassets in Resources */,
 				31A0F0471D85341E008BDBEA /* SubPageController.xib in Resources */,
 				31A0F0011D84F7E2008BDBEA /* Main.storyboard in Resources */,
@@ -456,7 +438,6 @@
 			files = (
 				31A0EFFE1D84F7E2008BDBEA /* ViewController.m in Sources */,
 				31A0EFFB1D84F7E2008BDBEA /* AppDelegate.m in Sources */,
-				31A0F03D1D84FDF7008BDBEA /* NMPageViewController.m in Sources */,
 				31A0EFF81D84F7E2008BDBEA /* main.m in Sources */,
 				31A0F0381D84F97D008BDBEA /* HomeViewController.m in Sources */,
 				31A0F0461D85341E008BDBEA /* SubPageController.m in Sources */,

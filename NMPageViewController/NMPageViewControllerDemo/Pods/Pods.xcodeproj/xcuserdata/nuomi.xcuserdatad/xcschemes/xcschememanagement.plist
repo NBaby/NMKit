@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NMPageViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-NMPageViewControllerDemo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53339920DCFF2DC3071B58D04BB9A82F</key>
+		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<key>91AA19AE9483A8234793A6DF7D1A5A0E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -53,6 +58,11 @@
 			<true/>
 		</dict>
 		<key>A0358C723C35D94FBA12C62283DDAB2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CC9E4FE20ECC9274B888DD2C46873582</key>
 		<dict>
 			<key>primary</key>
 			<true/>
