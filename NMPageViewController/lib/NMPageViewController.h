@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol NMPageViewControllerDelegate <NSObject>
-
+@optional
 // Sent when a gesture-initiated transition begins.
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers NS_AVAILABLE_IOS(6_0);
 
@@ -111,5 +111,5 @@
  *
  *  @return NMPageViewController
  */
-- (instancetype)initWithTitles:(NSArray *)titleArray viewControllers:(NSArray *)viewControllerArray delegate:(id<NMPageViewControllerDelegate>) delegate;
+- (instancetype)initWithTitles:(NSArray *)titleArray viewControllers:(NSArray *)viewControllerArray delegate:(id<NMPageViewControllerDelegate>) delegate parentView:(UIView *)view;
 @end

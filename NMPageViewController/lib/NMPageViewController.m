@@ -118,9 +118,11 @@
 }
 #pragma mark - PriVateMethod
 #pragma mark 初始化方法
-- (instancetype)initWithTitles:(NSArray *)titleArray viewControllers:(NSArray *)viewControllerArray delegate:(id<NMPageViewControllerDelegate>) delegate{
+- (instancetype)initWithTitles:(NSArray *)titleArray viewControllers:(NSArray *)viewControllerArray delegate:(id<NMPageViewControllerDelegate>) delegate parentView:(UIView *)view{
     self = [super init];
     if (self) {
+        self.view.frame = view.bounds;
+        [view addSubview:self.view];
         self.segmentTitleArray = titleArray;
         self.viewControllersArray = viewControllerArray;
         self.delegate = delegate;

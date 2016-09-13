@@ -10,7 +10,7 @@
 #import "SubPageController.h"
 #import "NMPageViewController.h"
 #import "Masonry.h"
-@interface HomeViewController (){
+@interface HomeViewController ()<NMPageViewControllerDelegate>{
     NMPageViewController * pageViewController;
 }
 
@@ -23,16 +23,8 @@
     [super viewDidLoad];
     [self initNavigationController];
     
-    pageViewController = [[NMPageViewController alloc]init];
-    [self.view addSubview:pageViewController.view];
-    pageViewController.segmentTitleArray = @[@"红色",@"蓝色",@"绿色",@"黑色"];
-
-    [pageViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view);
-        make.right.equalTo(self.view);
-        make.top.equalTo(self.view).offset(64);
-        make.bottom.equalTo(self.view);
-    }];
+  
+   
     
     NSMutableArray * mutableArray = [[NSMutableArray alloc]init];
     SubPageController * redController = [[SubPageController alloc]init];
@@ -51,7 +43,15 @@
     blackController.color = [UIColor blackColor];
     [mutableArray addObject:blackController];
     
-    pageViewController.viewControllersArray = mutableArray;
+ 
+    pageViewController = [[NMPageViewController alloc]initWithTitles:@[@"红色",@"蓝色",@"绿色",@"黑色"] viewControllers:mutableArray delegate:self parentView:self.view];
+    
+    [pageViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+        make.top.equalTo(self.view).offset(64);
+        make.bottom.equalTo(self.view);
+    }];
 
 }
 
