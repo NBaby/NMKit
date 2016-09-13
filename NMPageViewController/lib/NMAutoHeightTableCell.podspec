@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "NMAutoHeightTableCell"
-  s.version      = "0.0.2"
+  s.name         = "NMPageViewController"
+  s.version      = "0.0.3"
   s.summary      = "一个封装过带有SegmentView的pageViewController"
 
   # This description is used to generate tags and improve search results.
