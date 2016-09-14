@@ -20,6 +20,9 @@
 		31A0F0391D84F97D008BDBEA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0F0371D84F97D008BDBEA /* HomeViewController.xib */; };
 		31A0F0461D85341E008BDBEA /* SubPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A0F0441D85341E008BDBEA /* SubPageController.m */; };
 		31A0F0471D85341E008BDBEA /* SubPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A0F0451D85341E008BDBEA /* SubPageController.xib */; };
+		31DA485F1D88E7EE00202B36 /* NMPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DA485C1D88E7EE00202B36 /* NMPageViewController.m */; };
+		31DA48601D88E7EE00202B36 /* NMPageViewController.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 31DA485D1D88E7EE00202B36 /* NMPageViewController.podspec */; };
+		31DA48611D88E7EE00202B36 /* NMPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31DA485E1D88E7EE00202B36 /* NMPageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,10 @@
 		31A0F0431D85341E008BDBEA /* SubPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubPageController.h; sourceTree = "<group>"; };
 		31A0F0441D85341E008BDBEA /* SubPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubPageController.m; sourceTree = "<group>"; };
 		31A0F0451D85341E008BDBEA /* SubPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubPageController.xib; sourceTree = "<group>"; };
+		31DA485B1D88E7EE00202B36 /* NMPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMPageViewController.h; sourceTree = "<group>"; };
+		31DA485C1D88E7EE00202B36 /* NMPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMPageViewController.m; sourceTree = "<group>"; };
+		31DA485D1D88E7EE00202B36 /* NMPageViewController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NMPageViewController.podspec; sourceTree = "<group>"; };
+		31DA485E1D88E7EE00202B36 /* NMPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMPageViewController.xib; sourceTree = "<group>"; };
 		8229D92341E2EB0967839EFE /* Pods-NMPageViewControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NMPageViewControllerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NMPageViewControllerDemo/Pods-NMPageViewControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BC8B139041F45178B38D6BFE /* Pods-NMPageViewControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NMPageViewControllerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NMPageViewControllerDemo/Pods-NMPageViewControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +133,7 @@
 		31A0EFF51D84F7E2008BDBEA /* NMPageViewControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				31DA485A1D88E7EE00202B36 /* lib */,
 				31A0F0291D84F85E008BDBEA /* SRC */,
 				31A0EFF91D84F7E2008BDBEA /* AppDelegate.h */,
 				31A0EFFA1D84F7E2008BDBEA /* AppDelegate.m */,
@@ -241,6 +249,17 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		31DA485A1D88E7EE00202B36 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				31DA485B1D88E7EE00202B36 /* NMPageViewController.h */,
+				31DA485C1D88E7EE00202B36 /* NMPageViewController.m */,
+				31DA485D1D88E7EE00202B36 /* NMPageViewController.podspec */,
+				31DA485E1D88E7EE00202B36 /* NMPageViewController.xib */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		FB23046F67D64AC892B8E223 /* Pods */ = {
@@ -360,9 +379,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A0F0061D84F7E2008BDBEA /* LaunchScreen.storyboard in Resources */,
+				31DA48601D88E7EE00202B36 /* NMPageViewController.podspec in Resources */,
 				31A0F0031D84F7E2008BDBEA /* Assets.xcassets in Resources */,
 				31A0F0471D85341E008BDBEA /* SubPageController.xib in Resources */,
 				31A0F0011D84F7E2008BDBEA /* Main.storyboard in Resources */,
+				31DA48611D88E7EE00202B36 /* NMPageViewController.xib in Resources */,
 				31A0F0391D84F97D008BDBEA /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31DA485F1D88E7EE00202B36 /* NMPageViewController.m in Sources */,
 				31A0EFFE1D84F7E2008BDBEA /* ViewController.m in Sources */,
 				31A0EFFB1D84F7E2008BDBEA /* AppDelegate.m in Sources */,
 				31A0EFF81D84F7E2008BDBEA /* main.m in Sources */,

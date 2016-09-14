@@ -10,6 +10,7 @@
 #import "SubPageController.h"
 #import "NMPageViewController.h"
 #import "Masonry.h"
+
 @interface HomeViewController ()<NMPageViewControllerDelegate>{
     NMPageViewController * pageViewController;
 }
@@ -41,7 +42,9 @@
     [mutableArray addObject:blackController];
     
  
-    pageViewController = [[NMPageViewController alloc]initWithTitles:@[@"红色",@"蓝色",@"绿色",@"黑色"] viewControllers:mutableArray delegate:self parentView:self.view];
+    pageViewController = [[NMPageViewController alloc]initWithTitles:@[@"红色色",@"蓝",@"绿色",@"黑色"] viewControllers:mutableArray delegate:self parentView:self.view];
+    pageViewController.scrollAnimation = YES;
+    pageViewController.slipingBlockAnimationType = NMSlipingBlockAnimationGradient;
     
     [pageViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view);
