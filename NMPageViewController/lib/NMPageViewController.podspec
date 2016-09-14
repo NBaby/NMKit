@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NMPageViewController"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "一个封装过带有SegmentView的pageViewController"
 
   # This description is used to generate tags and improve search results.
