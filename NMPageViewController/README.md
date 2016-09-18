@@ -1,15 +1,7 @@
 #NMPageViewController
 ##前言
 ***
-最近的项目很多页面都是UIPageViewController加上segment点击切换的界面结构。每次都重复写觉得真的很麻烦，因此抽出时间封装了一个NMPageViewController。先来看看效果：
-
-* NMSlipingBlockAnimationGradientmo 模式
-
-![NMSlipingBlockAnimationGradientmo模式](http://upload-images.jianshu.io/upload_images/2368050-8a3267635a199fa5.gif?imageMogr2/auto-orient/strip)
-
-* NMSlipingBlockAnimationNomal 模式
-
-![NMSlipingBlockAnimationNomal模式](http://upload-images.jianshu.io/upload_images/2368050-bdf7075840f77074.gif?imageMogr2/auto-orient/strip)
+最近的项目很多页面都是UIPageViewController加上segment点击切换的界面结构。每次都重复写觉得真的很麻烦，因此抽出时间封装了一个NMPageViewController。
 
 ##特性
 ***
