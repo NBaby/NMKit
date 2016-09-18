@@ -11,6 +11,7 @@
 
 
 
+
 @interface NMPageViewController ()<UIPageViewControllerDelegate,UIPageViewControllerDataSource,UIScrollViewDelegate>{
     UIPageViewController * mainPageViewController;
     
@@ -23,6 +24,8 @@
     double slidingBlockWidth;
     
     double screenWidth;
+    ///目标页面
+    NSInteger targetPage;
 }
 
 /**
@@ -107,6 +110,8 @@
 
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers{
+    
+    targetPage = [_viewControllersArray indexOfObject:pendingViewControllers[0]];
     if (scrollow == nil) {
         //获得scrollView控制权
         for (int i= 0 ; i < pageViewController.view.subviews.count; i++) {
@@ -256,14 +261,14 @@
         [_segmentBtnArray[_currentPage] setTitleColor:curColor forState:UIControlStateNormal];
         
          UIColor * rightBtnColor = [self mixColor1:self.btnHighLightColor color2:self.btnNomalColor ratio:(offsetX - screenWidth)/screenWidth ];
-        _segmentBtnArray[_currentPage + 1].selected = NO;
-        [_segmentBtnArray[_currentPage + 1] setTitleColor:rightBtnColor forState:UIControlStateNormal];
+        _segmentBtnArray[targetPage].selected = NO;
+        [_segmentBtnArray[targetPage] setTitleColor:rightBtnColor forState:UIControlStateNormal];
         //小滑块位置调整
-        _slidingBlockCoordinateConstraint.constant = (offsetX - screenWidth) / self.segmentTitleArray.count + slidingBlockWidth/2 + _currentPage * slidingBlockWidth - screenWidth/2;
-        if (self.slipingBlockAnimationType == NMSlipingBlockAnimationGradient) {
+        _slidingBlockCoordinateConstraint.constant = (offsetX - screenWidth) * labs(targetPage - _currentPage) / self.segmentTitleArray.count + slidingBlockWidth/2 +  _currentPage * slidingBlockWidth - screenWidth/2;
+        if (self.slipingBlockAnimationType == NMSlipingBlockAnimationGradient ) {
             double ratio = (offsetX - screenWidth)/screenWidth;
             double currentTitleWidth = [_segmentTitleLengthArray[_currentPage] doubleValue];
-            double rightTitleWidth = [_segmentTitleLengthArray[_currentPage +1] doubleValue];
+            double rightTitleWidth = [_segmentTitleLengthArray[targetPage] doubleValue];
             _slidingBlockWidthConstraint.constant = currentTitleWidth + (rightTitleWidth -currentTitleWidth)*ratio;
         }
     }
@@ -274,14 +279,14 @@
         [_segmentBtnArray[_currentPage] setTitleColor:curColor forState:UIControlStateNormal];
         
         UIColor * rightBtnColor = [self mixColor1:self.btnHighLightColor color2: self.btnNomalColor ratio:(screenWidth -offsetX)/screenWidth ];
-        _segmentBtnArray[_currentPage - 1].selected = NO;
-        [_segmentBtnArray[_currentPage - 1] setTitleColor:rightBtnColor forState:UIControlStateNormal];
+        _segmentBtnArray[targetPage].selected = NO;
+        [_segmentBtnArray[targetPage] setTitleColor:rightBtnColor forState:UIControlStateNormal];
         //小滑块位置调整
-        _slidingBlockCoordinateConstraint.constant = (offsetX - screenWidth) / self.segmentTitleArray.count + slidingBlockWidth/2 + _currentPage * slidingBlockWidth - screenWidth/2;
+        _slidingBlockCoordinateConstraint.constant = (offsetX - screenWidth) * labs(targetPage - _currentPage)/ self.segmentTitleArray.count + slidingBlockWidth/2 + _currentPage * slidingBlockWidth - screenWidth/2;
         if (self.slipingBlockAnimationType == NMSlipingBlockAnimationGradient) {
             double ratio = (screenWidth - offsetX)/screenWidth;
             double currentTitleWidth = [_segmentTitleLengthArray[_currentPage] doubleValue];
-            double leftTitleWidth = [_segmentTitleLengthArray[_currentPage - 1] doubleValue];
+            double leftTitleWidth = [_segmentTitleLengthArray[targetPage] doubleValue];
             _slidingBlockWidthConstraint.constant = currentTitleWidth + (leftTitleWidth -currentTitleWidth)*ratio;
         }
 
@@ -328,16 +333,41 @@
 #pragma mark - EventResponse
 #pragma mark 点击segment按钮
 - (void)tapSegmentWithBtn:(UIButton *)btn{
+    if (scrollow ==  nil) {
+        //获得scrollView控制权
+        for (int i= 0 ; i < mainPageViewController.view.subviews.count; i++) {
+            if ([mainPageViewController.view.subviews[i] isKindOfClass:[UIScrollView class]]) {
+                scrollow =  mainPageViewController.view.subviews[i];
+            }
+        }
+        scrollow.delegate = self;
+    }
+    targetPage = btn.tag;
     if (btn.tag < _viewControllersArray.count) {
-        
+        __weak typeof(self) wSelf= self;
         //只有按钮个数小于Controller个数的前提下，点击才生效
         if (_currentPage < btn.tag) {
-            self.currentPage = btn.tag;
-            [mainPageViewController setViewControllers:@[_viewControllersArray[btn.tag]] direction:UIPageViewControllerNavigationDirectionForward animated:_scrollAnimation completion:nil];
+            
+           
+            [mainPageViewController setViewControllers:@[_viewControllersArray[btn.tag]] direction:UIPageViewControllerNavigationDirectionForward animated:_scrollAnimation completion:^(BOOL finished) {
+                if (finished) {
+                    [wSelf setCurrentPage:btn.tag];
+
+                }
+            }];
+           
+            
         }
         else {
-            self.currentPage = btn.tag;
-            [mainPageViewController setViewControllers:@[_viewControllersArray[btn.tag]] direction: UIPageViewControllerNavigationDirectionReverse  animated:_scrollAnimation completion:nil];
+            
+            [mainPageViewController setViewControllers:@[_viewControllersArray[btn.tag]] direction: UIPageViewControllerNavigationDirectionReverse  animated:_scrollAnimation completion:^(BOOL finished) {
+                if (finished) {
+                    [wSelf setCurrentPage:btn.tag];
+                }
+                
+            }];
+            
+            
         }
        
        

@@ -256,8 +256,8 @@
 			children = (
 				31DA485B1D88E7EE00202B36 /* NMPageViewController.h */,
 				31DA485C1D88E7EE00202B36 /* NMPageViewController.m */,
-				31DA485D1D88E7EE00202B36 /* NMPageViewController.podspec */,
 				31DA485E1D88E7EE00202B36 /* NMPageViewController.xib */,
+				31DA485D1D88E7EE00202B36 /* NMPageViewController.podspec */,
 			);
 			path = lib;
 			sourceTree = "<group>";
