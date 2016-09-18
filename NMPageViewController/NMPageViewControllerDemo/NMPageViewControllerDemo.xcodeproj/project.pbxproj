@@ -259,7 +259,8 @@
 				31DA485E1D88E7EE00202B36 /* NMPageViewController.xib */,
 				31DA485D1D88E7EE00202B36 /* NMPageViewController.podspec */,
 			);
-			path = lib;
+			name = lib;
+			path = ../../lib;
 			sourceTree = "<group>";
 		};
 		FB23046F67D64AC892B8E223 /* Pods */ = {
