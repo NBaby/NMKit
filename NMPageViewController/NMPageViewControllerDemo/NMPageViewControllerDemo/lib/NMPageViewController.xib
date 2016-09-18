@@ -58,7 +58,7 @@
                 <constraint firstItem="Leo-3a-KT0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DA0-Bv-h5M"/>
                 <constraint firstAttribute="trailing" secondItem="Leo-3a-KT0" secondAttribute="trailing" id="q3e-7f-GeS"/>
             </constraints>
-            <point key="canvasLocation" x="177" y="447"/>
+            <point key="canvasLocation" x="161" y="141"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -287,6 +287,7 @@
             double ratio = (screenWidth - offsetX)/screenWidth;
             double currentTitleWidth = [_segmentTitleLengthArray[_currentPage] doubleValue];
             double leftTitleWidth = [_segmentTitleLengthArray[targetPage] doubleValue];
+            
             _slidingBlockWidthConstraint.constant = currentTitleWidth + (leftTitleWidth -currentTitleWidth)*ratio;
         }
 
