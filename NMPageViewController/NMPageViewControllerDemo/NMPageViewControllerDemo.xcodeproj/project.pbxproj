@@ -116,7 +116,8 @@
 				3190999C1D8E71AC003FEA26 /* NMPageViewController.podspec */,
 				3190999D1D8E71AC003FEA26 /* NMPageViewController.xib */,
 			);
-			path = lib;
+			name = lib;
+			path = ../../lib;
 			sourceTree = "<group>";
 		};
 		31A0EFEA1D84F7E2008BDBEA = {
