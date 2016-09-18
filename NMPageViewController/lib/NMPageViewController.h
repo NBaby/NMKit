@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger) {
+    //普通样式
+    NMSlipingBlockAnimationNomal,
+    //随着title字体渐变
+    NMSlipingBlockAnimationGradient
+    
+}NMSlipingBlockAnimation;
+
 @protocol NMPageViewControllerDelegate <NSObject>
 @optional
 // Sent when a gesture-initiated transition begins.
@@ -102,6 +110,12 @@
  */
 
 @property (assign, nonatomic) BOOL isHideSlidingBlock;
+
+/**
+ *  小滑块的动画样式
+ */
+@property (assign, nonatomic) NMSlipingBlockAnimation slipingBlockAnimationType;
+
 /**
  *  初始化方法
  *
