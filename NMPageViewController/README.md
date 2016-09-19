@@ -130,5 +130,5 @@
 ##安装
 ***
 * github:[https://github.com/NBaby/NMKit/tree/master/NMPageViewController](https://github.com/NBaby/NMKit/tree/master/NMPageViewController)
-
+* **cocoapods:** pod 'NMPageViewController', '~> 0.0.5'
  
